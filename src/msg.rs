@@ -40,7 +40,7 @@ pub enum ExecuteMsg<T> {
     Burn {
         token_id: String,
     },
-    Mutate {
+    MutateMetadata {
         token_id: String,
         token_uri: String
     },

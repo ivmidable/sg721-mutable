@@ -1,9 +1,9 @@
 use sg721_base::contract::create;
 
 use cosmwasm_std::{DepsMut, Env, MessageInfo};
-use cw2::set_contract_version;
+//use cw2::set_contract_version;
 
-use sg721::InstantiateMsg;
+//use sg721::InstantiateMsg;
 use sg_std::Response;
 
 use crate::Sg721Base;
@@ -11,10 +11,11 @@ use crate::Sg721Base;
 use sg721_base::state::COLLECTION_INFO;
 
 // version info for migration info
-const CONTRACT_NAME: &str = "crates.io:sg721-mutable";
-const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
+pub const CONTRACT_NAME: &str = "crates.io:sg721-mutable";
+pub const BASE_CONTRACT_NAME: &str = "crates.io:sg721-base";
+pub const CONTRACT_VERSION: &str = env!("CARGO_PKG_VERSION");
 
-pub fn _instantiate(
+/*pub fn _instantiate(
     contract: Sg721Base,
     deps: DepsMut,
     _env: Env,
@@ -24,9 +25,9 @@ pub fn _instantiate(
     set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION)?;
 
     create(contract, deps, info, msg)
-}
+}*/
 
-pub fn mutate(
+pub fn mutate_metadata(
     contract: Sg721Base,
     deps:DepsMut,
     _env:Env,
